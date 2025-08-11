@@ -1,0 +1,68 @@
+<mvc:View controllerName="com.ui5.trng.sapui5bootcampactivity01.controller.SurveyForm"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="page-surveyform" title="{i18n>title}" class="sapUiResponsiveContentPadding">
+        <content>
+            <VBox >
+                <items>
+                    <f:SimpleForm 
+                        class="sf-survey" 
+                        title="{i18n>surveyForm.title}"
+                        layout="ResponsiveGridLayout"
+                        width="100%"
+                        adjustLabelSpan="false"
+                        labelSpanXL="3" 
+                        labelSpanL="3" 
+                        labelSpanM="3" 
+                        labelSpanS="12"  
+                        emptySpanXL="3" 
+                        emptySpanL="3" 
+                        emptySpanM="3" 
+                        emptySpanS="0" >
+                        <f:content>
+                            <Label text="{i18n>surveyForm.name}" labelFor="txtName"/>
+                            <Input id="txtName"/>
+                            
+                            <Label text="{i18n>surveyForm.street}" labelFor="txtStreet, txtStreetNo"/>
+                            <Input id="txtStreet">
+                                <layoutData>
+                                    <l:GridData span="L4 S12" />
+                                </layoutData>
+                            </Input>
+                            <Input id="txtStreetNo">    
+                                <layoutData>
+                                    <l:GridData span="L2 S12" />
+                                </layoutData>
+                            </Input>
+
+                            <Label text="{i18n>surveyForm.city}" labelFor="txtZipCode, txtCity"/>
+                            <Input id="txtZipCode">
+                                <layoutData>
+                                    <l:GridData span="L2 S12" />
+                                </layoutData>
+                            </Input>
+                            <Input id="txtCity">
+                                <layoutData>
+                                    <l:GridData span="L4 S12" />
+                                </layoutData>
+                            </Input>
+
+                            <Label text="{i18n>surveyForm.country}" labelFor="selectCountry"/>
+                            <Select id="selectCountry">
+                                <items>
+                                    <core:Item key="england" text="England" />
+                                    <core:Item key="germany" text="Germany" />
+                                    <core:Item key="usa" text="USA" />
+                                    <core:Item key="philippines" text="Philippines" />
+                                </items>
+                            </Select>
+                        </f:content>
+                    </f:SimpleForm>
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
