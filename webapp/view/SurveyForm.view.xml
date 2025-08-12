@@ -4,7 +4,7 @@
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core">
-    <Page id="page-surveyform" title="{i18n>title}" class="sapUiResponsiveContentPadding">
+    <Page id="pageSurveyform" title="{i18n>title}" class="sapUiResponsiveContentPadding">
         <content>
             <VBox >
                 <items>
